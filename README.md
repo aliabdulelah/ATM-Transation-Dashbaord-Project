@@ -56,9 +56,9 @@ Total Cost Analysis:
 #### Transaction Ranges:
 
 ATMs are categorized into transaction ranges such as Below 10K, 10K-20K, 20K-25K, and so on.
-**Top Performers**: ATMs with transaction volumes above 50K show strong performance in terms of uptime (93.3%) and gross profit (64.11%).
-**Low Performers**: ATMs with less than 10K transactions exhibit a higher gross profit percentage (249.74%) but also reflect inefficiencies in terms of operational uptime (82.6%).
-**Conclusion**: This section allows for easy identification of high- and low-performing ATMs, offering actionable insights into how to manage underperforming ATMs more effectively and increase transaction volumes.
+- **Top Performers**: ATMs with transaction volumes above 50K show strong performance in terms of uptime (93.3%) and gross profit (64.11%).
+- **Low Performers**: ATMs with less than 10K transactions exhibit a higher gross profit percentage (249.74%) but also reflect inefficiencies in terms of operational uptime (82.6%).
+- **Conclusion**: This section allows for easy identification of high- and low-performing ATMs, offering actionable insights into how to manage underperforming ATMs more effectively and increase transaction volumes.
 
 
 #### Margin Range Analysis:
@@ -70,15 +70,15 @@ Transaction Range Analysis:
 
 ##### Previous Month:
 ATM IDs are grouped by transaction volumes, with categories such as 100-125, 125-150, etc.
-**High-Performing ATMs**: 1,307 ATMs processed over 200 transactions, indicating peak performance.
-**Low-Performing ATMs**: 287 ATMs processed fewer than 50 transactions, suggesting low engagement or potential technical issues.
+- **High-Performing ATMs**: 1,307 ATMs processed over 200 transactions, indicating peak performance.
+- **Low-Performing ATMs**: 287 ATMs processed fewer than 50 transactions, suggesting low engagement or potential technical issues.
 
 
 #### Key Metrics by State:
 
-**Average Transactions**: Shows the average number of transactions per month for each state, with Punjab leading at 67.14 transactions per ATM.
-**Average Monthly Revenue**: States like Assam, Jammu & Kashmir, and Ladakh show significant revenue figures, with Ladakh having a notably high uptime (93.8%) and a gross profit margin of 75.45%.
-**Gross Profit**: Gross profit varies widely, with Manipur achieving an exceptionally high gross profit of 111.85%, while states like Punjab and Tripura have lower percentages.
+- **Average Transactions**: Shows the average number of transactions per month for each state, with Punjab leading at 67.14 transactions per ATM.
+- **Average Monthly Revenue**: States like Assam, Jammu & Kashmir, and Ladakh show significant revenue figures, with Ladakh having a notably high uptime (93.8%) and a gross profit margin of 75.45%.
+- **Gross Profit**: Gross profit varies widely, with Manipur achieving an exceptionally high gross profit of 111.85%, while states like Punjab and Tripura have lower percentages.
 
 ## Technologies Used
 
