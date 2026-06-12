@@ -1,86 +1,104 @@
-# ATM-Transation-Dashbaord-Project
+
+# ATM Transaction & Revenue Dashboard — Power BI
 
 ![ATM Transation Dashbaord Project _page-0001](https://github.com/user-attachments/assets/f39a0697-c9db-47ed-b132-b731426bd8d4)
 
-### Home page
+Multi-page Power BI dashboard providing a comprehensive view of ATM network performance across Indian states — covering revenue generation, gross profit, transaction volumes, operational uptime, and cost analysis for 2,374+ ATMs.
 
-Provides an engaging introduction to ATM-Transation-Dashbaord, offering easy navigation to other sections.
+**Business question:** Which ATMs and regions are driving profitability, which are underperforming, and what operational levers most impact gross margin?
 
- The goal of the project is to build an analytical dashboard that provides a comprehensive view of ATM transactions, revenue generation, and operational performance, enabling stakeholders to optimize decision-making processes related to ATM management and profitability,
-you can download the dataset for this project from [Here](https://drive.google.com/drive/folders/1s-sRpKMHHD4TMj0aHuCxiGheaVYbn-3v))
-:
+---
 
-####🎨 Color Palette Used:
+## Dashboard pages
 
-#### Sky blue:    #A0D1FF
-#### Blue:        #0D6ABF
-#### Red light:   #D64550
-#### Dark Blue:  #0D6ABF
+| Page | Purpose |
+|---|---|
+| **Home** | Navigation hub and project overview |
+| **Overview** | Network-wide KPIs: revenue, transactions, uptime, gross profit |
+| **Details** | ATM-level performance by transaction range and margin band |
 
+---
 
+## Key metrics tracked
 
-![ATM Transation Dashbaord Project _page-0002](https://github.com/user-attachments/assets/a62b4dcd-b863-4043-b0b5-c5bc8304b1ff)
+| Metric | Value |
+|---|---|
+| Total cost analysed | 296 million |
+| Average monthly revenue per ATM | 52.13K |
+| Gross profit margin | 59.60% |
+| Average ATM uptime | 91.9% |
+| Average monthly transactions per ATM | 178.89 |
+| ATMs with margin > 30% | 2,374 |
+| ATMs with negative margin | 549 |
 
-### Overview page
+---
 
-Overview of the ATM Transactions Dashboard
-This page serves as a high-level summary of the ATM Transactions Dashboard, focusing on key metrics related to ATM performance, revenue, and transactions across different regions.
+## Dashboard previews
 
-Core Components:
+**Overview page — network KPIs and revenue trends**
+![Overview](https://github.com/user-attachments/assets/a62b4dcd-b863-4043-b0b5-c5bc8304b1ff)
 
-MHA Revenue, Monthly Revenue, and ATM Revenue: Highlights the key financial indicators across multiple states like Assam, Punjab, Jammu & Kashmir, and others. This section provides the overall revenue performance of ATMs in these regions.
+**Details page — transaction ranges and margin analysis**
+![Details](https://github.com/user-attachments/assets/b46851c4-1d06-45ab-b04f-c46c870b4153)
 
-Average Financial (Fin) and Non-Financial Transactions by Month/Year:
+---
 
-Key Metrics: Displays average transaction volumes (both financial and non-financial) across specific months like March, August, November, and December of 2024. This comparison allows for an assessment of transactional trends across the year.
-Chart Insights: Visual charts offer stakeholders an easy way to analyze trends and spot any seasonality or growth patterns.
-Total Cost Analysis:
+## Key findings
 
-- **Total Cost**: 296 million, reflecting the cumulative costs associated with operating ATMs in the covered regions.
-- **Average Total Transactions**: 178.89 transactions per ATM.
-- **Average Monthly Revenue**: 52.13K, representing the average income generated per ATM.
-- **Gross Profit**: 59.60%, a key profitability metric that indicates healthy revenue after cost deductions.
-- **Average Uptime**: 91.9%, showing that ATMs are operational most of the time, directly influencing transaction volume and profitability.
+**By transaction volume:**
+- ATMs processing 50K+ transactions deliver 93.3% uptime and 64.11% gross profit — the highest-performing tier
+- ATMs below 10K transactions show 82.6% uptime and inflated gross profit % due to low cost base — but represent operational risk
 
- <br>
+**By geography (top states):**
+- Punjab leads in average transactions per ATM: 67.14/month
+- Ladakh achieves the highest uptime (93.8%) and 75.45% gross profit
+- Manipur outlier: 111.85% gross profit — flagged for further investigation
 
- <br>
- <br>
- <br>
+**By margin band:**
+- 549 ATMs operate at negative margin — concentrated in specific states and transaction ranges
+- Targeted intervention on these units represents the highest-ROI improvement opportunity
 
-![ATM Transation Dashbaord Project -page-0003](https://github.com/user-attachments/assets/b46851c4-1d06-45ab-b04f-c46c870b4153)
+---
 
+## Tools used
 
-### Details page
+- **Power BI** — data modelling, DAX measures, multi-page dashboard design, KPI cards, trend charts
+- **Excel** — data cleaning and preparation
+- **Data source** — [Here](https://drive.google.com/drive/folders/1s-sRpKMHHD4TMj0aHuCxiGheaVYbn-3v))
 
-#### Transaction Ranges:
+---
 
-ATMs are categorized into transaction ranges such as Below 10K, 10K-20K, 20K-25K, and so on.
-- **Top Performers**: ATMs with transaction volumes above 50K show strong performance in terms of uptime (93.3%) and gross profit (64.11%).
-- **Low Performers**: ATMs with less than 10K transactions exhibit a higher gross profit percentage (249.74%) but also reflect inefficiencies in terms of operational uptime (82.6%).
-- **Conclusion**: This section allows for easy identification of high- and low-performing ATMs, offering actionable insights into how to manage underperforming ATMs more effectively and increase transaction volumes.
+## DAX measures built
 
+- Monthly Revenue (rolling calculation)
+- Gross Profit % by ATM and region
+- Average Uptime % with threshold flagging
+- Transaction volume bands (dynamic categorisation)
+- MoM revenue variance
 
-#### Margin Range Analysis:
+---
 
-##### Current Month:
-ATMs are categorized based on performance margins (0-5%, 10-15%, etc.). The dashboard captures how many ATMs fall into each margin band, with over 2,374 ATMs achieving margins above 30%, indicating high profitability.
-Key Insight: This margin-based approach helps identify underperforming ATMs (e.g., 549 ATMs have negative margins) and allows for targeted action to improve profitability.
-Transaction Range Analysis:
+## Design decisions
 
-##### Previous Month:
-ATM IDs are grouped by transaction volumes, with categories such as 100-125, 125-150, etc.
-- **High-Performing ATMs**: 1,307 ATMs processed over 200 transactions, indicating peak performance.
-- **Low-Performing ATMs**: 287 ATMs processed fewer than 50 transactions, suggesting low engagement or potential technical issues.
+- **Colour palette:** Sky blue (#A0D1FF) · Blue (#0D6ABF) · Red (#D64550) — chosen for clear positive/negative signal contrast on financial KPIs
+- **Navigation structure:** Home → Overview → Details mirrors how a stakeholder would investigate — from headline numbers down to root cause
+- **Margin band approach:** Categorising by margin % rather than absolute revenue makes the analysis actionable for ATM network managers regardless of region size
 
+---
 
-#### Key Metrics by State:
+## Recommendations
 
-- **Average Transactions**: Shows the average number of transactions per month for each state, with Punjab leading at 67.14 transactions per ATM.
-- **Average Monthly Revenue**: States like Assam, Jammu & Kashmir, and Ladakh show significant revenue figures, with Ladakh having a notably high uptime (93.8%) and a gross profit margin of 75.45%.
-- **Gross Profit**: Gross profit varies widely, with Manipur achieving an exceptionally high gross profit of 111.85%, while states like Punjab and Tripura have lower percentages.
+1. **Prioritise uptime improvement** in the sub-10K transaction tier — a 5% uptime increase in this band would meaningfully shift them into profitability
+2. **Investigate the 549 negative-margin ATMs** — determine whether these are structural (location, cost base) or operational (downtime, low activation)
+3. **Replicate Ladakh operating model** — highest combined uptime and gross profit; document and apply best practices network-wide
+4. **Set Punjab as transaction benchmark** — 67.14 avg transactions/ATM is the network high; use as the KPI target for underperforming states
 
-## Technologies Used
+---
 
-- **Power BI:** For data visualization and dashboard creation.
-- **Excel :**   For Cleaning Data.
+## Files
+
+| File | Description |
+|---|---|
+| `README.md` | This file |
+| `screenshots/` | Dashboard page screenshots |
+
